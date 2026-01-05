@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>ALZION MOTORS | Venta de Vehículos</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+
+    <style>
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+ 
+
+        body {
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            background-color: #f3f3f3;
+
+            color: #333;
+
+        }
+
+ 
+
+        header {
+
+            background-color: #0e0e0e;
+
+            color: white;
+
+            padding: 20px 50px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+ 
+
+        header h1 {
+
+            font-size: 1.9em;
+
+            letter-spacing: 2px;
+
+        }
+
+ 
+
+        nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            margin-left: 30px;
+
+            font-weight: bold;
+
+            font-size: 0.95em;
+
+        }
+
+ 
+
+        nav a:hover {
+
+            color: #d4af37;
+
+        }
+
+ 
+
+        .hero {
+
+            height: 80vh;
+
+            background: url(https://images.unsplash.com/photo-1503376780353-7e6692767b70) center/cover no-repeat;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 60px;
+
+        }
+
+ 
+
+        .hero-box {
+
+            background-color: rgba(0,0,0,0.7);
+
+            color: white;
+
+            padding: 45px;
+
+            max-width: 520px;
+
+            border-radius: 12px;
+
+        }
+
+ 
+
+        .hero-box h2 {
+
+            font-size: 2.7em;
+
+            margin-bottom: 15px;
+
+        }
+
+ 
+
+        .hero-box p {
+
+            font-size: 1.1em;
+
+            margin-bottom: 25px;
+
+        }
+
+ 
+
+        .hero-box a {
+
+            padding: 14px 35px;
+
+            background-color: #d4af37;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            color: black;
+
+            text-decoration: none;
+
+        }
+
+ 
+
+        .section {
+
+            padding: 70px 40px;
+
+            max-width: 1200px;
+
+            margin: auto;
+
+        }
+
+ 
+
+        .section h3 {
+
+            text-align: center;
+
+            font-size: 2.2em;
+
+            margin-bottom: 50px;
+
+        }
+
+ 
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 35px;
+
+        }
+
+ 
+
+        .card {
+
+            background-color: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+
+        }
+
+ 
+
+        .card img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+        }
+
+ 
+
+        .card-content {
+
+            padding: 25px;
+
+        }
+
+ 
+
+        .card-content h4 {
+
+            font-size: 1.3em;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .details {
+
+            font-size: 0.9em;
+
+            color: #555;
+
+            margin-bottom: 10px;
+
+        }
+
+ 
+
+        .price {
+
+            color: #0a7a0a;
+
+            font-weight: bold;
+
+            font-size: 1.2em;
+
+            margin-bottom: 15px;
+
+        }
+
+ 
+
+        .card-content a {
+
+            display: block;
+
+            text-align: center;
+
+            padding: 12px;
+
+            background-color: #0e0e0e;
+
+            color: white;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+ 
+
+        .benefits {
+
+            background-color: white;
+
+            padding: 70px 40px;
+
+        }
+
+ 
+
+        .benefits-grid {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 40px;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .contact {
+
+            background-color: #f3f3f3;
+
+            padding: 70px 40px;
+
+            text-align: center;
+
+        }
+
+ 
+
+        .contact a {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 15px 40px;
+
+            background-color: #25d366;
+
+            color: white;
+
+            border-radius: 30px;
+
+            font-size: 1.1em;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+        }
+
+ 
+
+        footer {
+
+            background-color: #0e0e0e;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 0.9em;
+
+        }
+
+ 
+
+        .whatsapp {
+
+            position: fixed;
+
+            bottom: 25px;
+
+            right: 25px;
+
+            background-color: #25d366;
+
+            color: white;
+
+            padding: 15px 18px;
+
+            border-radius: 50%;
+
+            font-size: 22px;
+
+            text-decoration: none;
+
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+        }
+
+    </style>
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+<header>
+
+    <h1>ALZION MOTORS</h1>
+
+    <nav>
+
+        <a href="#vehiculos">Vehículos</a>
+
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+</header>
+
+ 
+
+<section class="hero">
+
+    <div class="hero-box">
+
+        <h2>Tu próximo vehículo te está esperando</h2>
+
+        <p>Unidades seleccionadas, listas para transferir.</p>
+
+        <a href="#vehiculos">Ver Vehículos</a>
+
+    </div>
+
+</section>
+
+ 
+
+<section class="section" id="vehiculos">
+
+    <h3>Vehículos Disponibles</h3>
+
+ 
+
+    <div class="cards">
+
+        <div class="card">
+
+            <img src=https://images.unsplash.com/photo-1617814076231-8a2a8f9f66a3>
+
+            <div class="card-content">
+
+                <h4>Renault Sandero</h4>
+
+                <p class="details">2019 · 80.000 km · Manual</p>
+
+                <p class="price">$8.500.000</p>
+
+                <a href=https://wa.me/5491111111111>Consultar</a>
+
+            </div>
+
+        </div>
+
+ 
+
+        <div class="card">
+
+            <img src=https://images.unsplash.com/photo-1549924231-f129b911e442>
+
+            <div class="card-content">
+
+                <h4>Renault Logan</h4>
+
+                <p class="details">2020 · 65.000 km · Manual</p>
+
+                <p class="price">$9.200.000</p>
+
+                <a href=https://wa.me/5491111111111>Consultar</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+ 
+
+<section class="contact" id="contacto">
+
+    <h3>Contactanos</h3>
+
+    <p>Respondemos rápido y te asesoramos en todo.</p>
+
+    <a href=https://wa.me/5491111111111>Hablar por WhatsApp</a>
+
+</section>
+
+ 
+
+<footer>
+
+    © 2026 ALZION MOTORS · Venta de Vehículos
+
+</footer>
+
+ 
+
+<a class="whatsapp" href=https://wa.me/5491111111111>🟢</a>
+
+ 
+
+</body>
+
+</html>
